@@ -1,0 +1,9 @@
+import React from 'react'
+
+function MealTracker() {
+    return (
+        <div>MealTracker</div>
+    )
+}
+
+export default MealTracker;
