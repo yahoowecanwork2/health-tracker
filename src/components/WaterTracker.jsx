@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../css-components/WaterTracker.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../Redux/waterSlice';
@@ -6,7 +6,11 @@ import { increment, decrement } from '../Redux/waterSlice';
 function WaterTracker() {
     const glasses = useSelector((state) => state.water.glasses);
     const dispatch = useDispatch();
-
+    useEffect(() => {
+        if (glasses == 8) {
+            alert("🎉 Congrats! You’ve completed your daily water goal!")
+        }
+    }, [glasses])
 
     return (
         <div className='water-container'>
