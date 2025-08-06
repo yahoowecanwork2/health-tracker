@@ -24,7 +24,7 @@ const waterSlice = createSlice({
         },
         resetToday: (state) => {
             state.glasses = 0;
-            state.weeklyIntake[state.dayIndex] = 0;
+            state.weeklyData[state.dayIndex] = 0;
         },
     },
 });

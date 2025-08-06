@@ -1,0 +1,24 @@
+.weekly-chart {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 150px;
+    padding: 20px;
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar {
+    width: 20px;
+    background-color: #00bcd4;
+    transition: height 0.3s;
+}
+
+.label {
+    margin-top: 5px;
+    font-size: 14px;
+}
