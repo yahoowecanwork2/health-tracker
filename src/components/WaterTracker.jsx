@@ -10,11 +10,18 @@ function WaterTracker() {
 
     return (
         <div className='water-container'>
-            <h1>water Intake Tracker</h1>
-            <p>You have had <strong>{glasses}</strong> glass{glasses !== 0 && "es"} today </p>
+            <h1> 💧water Intake Tracker</h1>
+            <p> 🥤You have had <strong>{glasses}</strong> glass{glasses !== 1 && "es"} today </p>
+            <div className="progress-bar-container">
+                <div className="progress-bar"
+                    style={{ width: `${(glasses / 8) * 100}%` }}>
+
+                </div>
+            </div>
+            <p>{glasses}/8 glasses completed</p>
             <div className='btn-group'>
-                <button onClick={() => dispatch(decrement)}>-</button>
-                <button onClick={() => dispatch(increment)}>+</button>
+                <button onClick={() => dispatch(decrement())}>➖ </button>
+                <button onClick={() => dispatch(increment())}>➕</button>
             </div>
 
         </div>
