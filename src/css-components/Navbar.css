@@ -1,0 +1,34 @@
+/* General navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00aaff;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo part */
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation links */
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ffd700;
+}

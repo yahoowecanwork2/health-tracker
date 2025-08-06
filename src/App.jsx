@@ -1,22 +1,26 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import navBar from './components/navBar'
+import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import WaterTracker from './components/WaterTracker'
 import MealTracker from './components/MealTracker'
 import ExerciseTracker from './components/ExerciseTracker'
+import SleepTracker from './components/SleepTracker'
 import PeriodTracker from './components/PeriodTracker'
 
 function App() {
   return (
     <div>
-      <navBar />
+      <Navbar />
       <Routes>
-        <Route to="/" element={<Home />} />
-        <Route to="/water" element={<WaterTracker />} />
-        <Route to="/meal" element={<MealTracker />} />
-        <Route to="/exercise" element={<ExerciseTracker />} />
-        <Route to="/periods" element={<PeriodTracker />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/water" element={<WaterTracker />} />
+        <Route path="/meal" element={<MealTracker />} />
+        <Route path="/sleep" element={<SleepTracker />} />
+        <Route path="/exercise" element={<ExerciseTracker />} />
+        <Route path="/periods" element={<PeriodTracker />} />
+        <Route path="/*" element={<h2>404 - Page Not Found</h2>} />
+
       </Routes>
     </div>
   )
