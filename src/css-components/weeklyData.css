@@ -1,24 +1,35 @@
-.weekly-chart {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 150px;
-    padding: 20px;
+.weekly-chart-container {
+    width: 95%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #f0f8ff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.bar-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.weekly-chart-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #0077b6;
+    font-size: 1.8rem;
 }
 
-.bar {
-    width: 20px;
-    background-color: #00bcd4;
-    transition: height 0.3s;
+.chart-wrapper {
+    width: 100%;
+    height: 300px;
 }
 
-.label {
-    margin-top: 5px;
-    font-size: 14px;
+@media (max-width: 600px) {
+    .weekly-chart-container {
+        padding: 0.8rem;
+    }
+
+    .weekly-chart-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .chart-wrapper {
+        height: 250px;
+    }
 }
